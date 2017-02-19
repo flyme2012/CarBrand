@@ -1,0 +1,37 @@
+<resources>
+
+    <!--default size -->
+    <style name="TextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.12SP">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.12SP.Blue">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.14SP">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.14SP.White">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="TextAppearance.16SP">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="TextAppearance.18SP">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+</resources>
