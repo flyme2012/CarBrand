@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.m.car2.utility.StatusBarHelper;
 import com.m.car2.utility.UIHelper;
+import com.umeng.analytics.MobclickAgent;
 
 /**
  * Created by hubing on 2017/2/18.
@@ -29,5 +30,14 @@ public class BaseActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
 
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
 }

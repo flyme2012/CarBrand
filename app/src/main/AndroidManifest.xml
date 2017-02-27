@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.m.car2">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
     <application
         android:name=".CarApp"
         android:allowBackup="true"
@@ -23,6 +28,10 @@
 
         <activity android:name=".CountryDetailActivity"
             android:launchMode="singleTask"/>
+
+
+        <meta-data android:value="YOUR_APP_KEY" android:name="58b4455b310c934a260020c6"/>
+        <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
     </application>
 
 </manifest>

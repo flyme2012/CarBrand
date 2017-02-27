@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.m.car2.BaseFragment;
 import com.m.car2.R;
 import com.m.car2.adapter.databinding.BindingHolder;
 import com.m.car2.adapter.databinding.ItemViewBindingTemplate;
@@ -24,7 +25,7 @@ import java.util.List;
  * Created by hubing on 2017/2/19.
  */
 
-public class BrandFragment extends Fragment {
+public class BrandFragment extends BaseFragment {
 
     public static BrandFragment newInstance() {
         BrandFragment webFragment = new BrandFragment();
