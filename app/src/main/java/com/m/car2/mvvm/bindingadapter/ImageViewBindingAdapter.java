@@ -22,6 +22,7 @@ import com.bumptech.glide.request.target.Target;
 import com.m.car2.CarApp;
 import com.m.car2.glide.decoder.PackageIconDecoder;
 import com.m.car2.glide.loader.PackageIconLoader;
+import com.m.car2.utility.SystemInfo;
 
 /**
  * Created by zhenyu on 16/12/15.
@@ -29,16 +30,20 @@ import com.m.car2.glide.loader.PackageIconLoader;
 
 public class ImageViewBindingAdapter {
 
-
-    @BindingAdapter({"applicationInfo", "placeHolder", "transformations"})
-    public static void loadImage(ImageView imageView, final ApplicationInfo applicationInfo, Drawable placeHolder, Transformation<Bitmap>[] transformations) {
+    @BindingAdapter({"resourceId", "placeHolder", "transformations"})
+    public static void loadImage(ImageView imageView, int resourceId, Drawable placeHolder, Transformation<Bitmap>[] transformations) {
         Glide.with(imageView.getContext())
-                .using(new PackageIconLoader(), ApplicationInfo.class)
-                .from(ApplicationInfo.class).as(Bitmap.class)
-                .decoder(new PackageIconDecoder(CarApp.getApp()))
-                .encoder(new BitmapEncoder(Bitmap.CompressFormat.PNG, 100))
-                .cacheDecoder(new FileToStreamDecoder<Bitmap>(new StreamBitmapDecoder(Downsampler.AT_LEAST, Glide.get(CarApp.getApp()).getBitmapPool(), DecodeFormat.PREFER_ARGB_8888)))
-                .diskCacheStrategy(DiskCacheStrategy.RESULT).load(applicationInfo)
+                .load(resourceId)
+                .override(SystemInfo.dip2pxInt(imageView.getContext(), 56), SystemInfo.dip2pxInt(imageView.getContext(), 56))
+                .placeholder(placeHolder)
+                .into(imageView);
+    }
+
+    @BindingAdapter({"resourceId", "placeHolder"})
+    public static void loadImage(ImageView imageView, int resourceId, Drawable placeHolder) {
+        Glide.with(imageView.getContext())
+                .load(resourceId)
+                .override(SystemInfo.dip2pxInt(imageView.getContext(), 56), SystemInfo.dip2pxInt(imageView.getContext(), 56))
                 .placeholder(placeHolder)
                 .into(imageView);
     }

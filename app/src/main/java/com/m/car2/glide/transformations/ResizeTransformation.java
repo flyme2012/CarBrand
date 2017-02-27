@@ -2,6 +2,7 @@ package com.m.car2.glide.transformations;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.util.Log;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.Transformation;
@@ -14,7 +15,6 @@ import com.bumptech.glide.load.resource.bitmap.BitmapResource;
  */
 
 public class ResizeTransformation implements Transformation<Bitmap> {
-
 
     private BitmapPool mBitmapPool;
     private int mResizeWidth;
@@ -59,6 +59,7 @@ public class ResizeTransformation implements Transformation<Bitmap> {
         Bitmap source = resource.get();
         Bitmap.Config config =
                 source.getConfig() != null ? source.getConfig() : Bitmap.Config.ARGB_8888;
+        Log.d("hb","ResizeTransformation(resizeWidth=" + mResizeWidth + ", resizeHeight=" + mResizeHeight + ")");
         Bitmap bitmap = mBitmapPool.get(mResizeWidth, mResizeHeight, config);
         if (bitmap == null) {
             bitmap = Bitmap.createScaledBitmap(source, mResizeWidth, mResizeHeight, true);

@@ -2,12 +2,11 @@ package com.m.car2.home;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -16,6 +15,7 @@ import com.m.car2.adapter.databinding.BindingHolder;
 import com.m.car2.adapter.databinding.ItemViewBindingTemplate;
 import com.m.car2.adapter.multitype.MultiTypeAdapter;
 import com.m.car2.databinding.BrandLayoutBinding;
+import com.m.car2.mode.ItemData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,32 +49,31 @@ public class BrandFragment extends Fragment {
         BrandLayoutBinding brandLayoutBinding = DataBindingUtil.inflate(inflater, R.layout.brand_layout, container, false);
         initData();
         MultiTypeAdapter adapter = new MultiTypeAdapter(listData, 1);
-        adapter.register(String.class, new BrandItemTemplate());
+        adapter.register(ItemData.class, new BrandItemTemplate());
         brandLayoutBinding.brandList.setAdapter(adapter);
         return brandLayoutBinding.getRoot();
     }
 
-    private List<String> listData;
+    private List<ItemData> listData;
 
     private void initData() {
         listData = new ArrayList<>();
-        listData.add("全部");
-        listData.add("中国");
-        listData.add("德国");
-        listData.add("美国");
-        listData.add("日本");
-        listData.add("英国");
-        listData.add("法国");
-        listData.add("意大利");
-        listData.add("瑞典");
-        listData.add("韩国");
-        listData.add("西班牙");
-        listData.add("俄罗斯");
-        listData.add("其他");
+        listData.add(new ItemData("全部", R.drawable.earth, 0));
+        listData.add(new ItemData("中国", R.drawable.china, 1));
+        listData.add(new ItemData("德国", R.drawable.germany, 2));
+        listData.add(new ItemData("美国", R.drawable.usa, 3));
+        listData.add(new ItemData("日本", R.drawable.japan, 4));
+        listData.add(new ItemData("英国", R.drawable.english, 5));
+        listData.add(new ItemData("法国", R.drawable.france, 6));
+        listData.add(new ItemData("意大利", R.drawable.italy, 7));
+        listData.add(new ItemData("瑞典", R.drawable.sweden, 8));
+        listData.add(new ItemData("韩国", R.drawable.korea, 9));
+        listData.add(new ItemData("西班牙", R.drawable.spain, 10));
+        listData.add(new ItemData("俄罗斯", R.drawable.russia, 11));
+        listData.add(new ItemData("其他", R.drawable.earth, 12));
     }
 
-    public static class BrandItemTemplate extends ItemViewBindingTemplate<String,BrandLayoutBinding> {
-
+    public static class BrandItemTemplate extends ItemViewBindingTemplate<ItemData, BrandLayoutBinding> {
         @Override
         protected int getItemLayoutId() {
             return R.layout.brand_item;
@@ -82,12 +81,22 @@ public class BrandFragment extends Fragment {
 
         @Override
         protected int getVariableId() {
-            return com.m.car2.BR.name;
+            return com.m.car2.BR.itemData;
         }
 
         @Override
-        protected void onBindViewHolder(BindingHolder<BrandLayoutBinding> holder, String item) {
+        protected void onBindViewHolder(BindingHolder<BrandLayoutBinding> holder, final ItemData item) {
             super.onBindViewHolder(holder, item);
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    jumpToDetail(item);
+                }
+            });
+        }
+
+        private void jumpToDetail(ItemData itemData) {
+
         }
     }
 }

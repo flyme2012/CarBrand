@@ -15,13 +15,19 @@ import com.m.car2.utility.SystemInfo;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import jp.wasabeef.glide.transformations.CropSquareTransformation;
-import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 /**
  * Created by zhenyu on 16/12/16.
  */
 
 public class ImageHelper implements EscapeProguard {
+
+    public static Transformation<Bitmap>[] createbrandItemTransformations() {
+        Context context = CarApp.getApp();
+        CropSquareTransformation cropSquareTransformation = new CropSquareTransformation(context);
+        int size = CarApp.getApp().getResources().getDisplayMetrics().widthPixels / 5;
+        return new Transformation[]{cropSquareTransformation};
+    }
 
     public static Transformation<Bitmap>[] createCoverTransformations() {
         Context context = CarApp.getApp();
@@ -40,11 +46,9 @@ public class ImageHelper implements EscapeProguard {
     public static Transformation<Bitmap>[] createPlaylistCoverItemTransformations() {
         Context context = CarApp.getApp();
         CropSquareTransformation cropSquareTransformation = new CropSquareTransformation(context);
-        int size = SystemInfo.getDimensionPixelSize(context, R.dimen.playlist_cover_item_size);
+        int size = SystemInfo.getDimensionPixelSize(context, R.dimen.floating_player_shadow_width);
         ResizeTransformation resizeTransformation = new ResizeTransformation(context, size);
-        int radius = SystemInfo.getDimensionPixelSize(context, R.dimen.default_cover_radius);
-        RoundedCornersTransformation roundedCornersTransformation = new RoundedCornersTransformation(context, radius, 0);
-        return new Transformation[]{cropSquareTransformation,roundedCornersTransformation,resizeTransformation};
+        return new Transformation[]{cropSquareTransformation, resizeTransformation};
     }
 
     public static Transformation<Bitmap>[] createFavoritePlaylistCoverTransformations() {

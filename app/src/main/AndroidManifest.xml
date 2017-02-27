@@ -18,8 +18,10 @@
             </intent-filter>
         </activity>
 
-
         <activity android:name=".home.HomeActivity"
+            android:launchMode="singleTask"/>
+
+        <activity android:name=".CountryDetailActivity"
             android:launchMode="singleTask"/>
     </application>
 

@@ -1,11 +1,14 @@
 package com.m.car2.home;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.m.car2.BaseActivity;
 import com.m.car2.R;
@@ -18,12 +21,31 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mLayoutBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        mLayoutBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        setSupportActionBar(mLayoutBinding.toolbar);
         mLayoutBinding.setPageIndex(0);
-
         mLayoutBinding.homePage.setAdapter(new HomePageAdapter(getSupportFragmentManager()));
-
         mLayoutBinding.homePage.addOnPageChangeListener(this);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.home_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.menu_item_share) {
+            Intent shareIntent = new Intent();
+            shareIntent.setAction(Intent.ACTION_SEND);
+            shareIntent.putExtra(Intent.EXTRA_TEXT, "market://details?id=" + getPackageName());
+            shareIntent.setType("text/plain");
+            //设置分享列表的标题，并且每次都显示分享列表
+            startActivity(Intent.createChooser(shareIntent, "分享到"));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -55,7 +77,7 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
         @Override
         public Fragment getItem(int position) {
             Fragment fragment = null;
-            switch (position){
+            switch (position) {
                 case 0:
                     fragment = BrandFragment.newInstance();
                     break;

@@ -27,7 +27,7 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         ActivitySplashBinding mLayoutBinding = DataBindingUtil.setContentView(SplashActivity.this, R.layout.activity_splash);
         uiHandler = new Handler();
-        SPHelper.getInstance().setLong(SPConstant.SPLASH_SHOW_COUNT,SPHelper.getInstance().getLong(SPConstant.SPLASH_SHOW_COUNT) + 1);
+        SPHelper.getInstance().setLong(SPConstant.SPLASH_SHOW_COUNT, SPHelper.getInstance().getLong(SPConstant.SPLASH_SHOW_COUNT) + 1);
 
         uiHandler.postDelayed(new Runnable() {
             @Override
@@ -35,9 +35,9 @@ public class SplashActivity extends BaseActivity {
                 startActivity(new Intent(SplashActivity.this, HomeActivity.class));
                 finish();
             }
-        },1000);
+        }, 1000);
 
-        if (SPHelper.getInstance().getLong(SPConstant.SPLASH_SHOW_COUNT) % 2 == 1 ){
+        if (SPHelper.getInstance().getLong(SPConstant.SPLASH_SHOW_COUNT) % 2 == 1) {
             mLayoutBinding.splashBg.setImageResource(R.drawable.splash_bg_exchange);
         }
 
@@ -45,4 +45,8 @@ public class SplashActivity extends BaseActivity {
 
     }
 
+    @Override
+    public boolean showTintStatusBar() {
+        return false;
+    }
 }
