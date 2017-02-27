@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryPink">#F94967</color>
+    <color name="colorPrimaryPurple">#976BF4</color>
+    <color name="colorDarkTranslucent">#66000000</color>
+    <color name="colorLightTranslucent">#4D000000</color>
+    <color name="colorWindowBackground">#F8F8F8</color>
+
+    <color name="pink_pressed_color">#DF415C</color>
+    <color name="pink_light_color">#66F94967</color>
+    <color name="black_alpha_e6">#E6000000</color>
+    <color name="black_alpha_cc">#CC000000</color>
+    <color name="black_alpha_99">#99000000</color>
+    <color name="black_alpha_80">#80000000</color>
+    <color name="black_alpha_66">#66000000</color>
+    <color name="black_alpha_33">#33000000</color>
+    <color name="black_alpha_1a">#1A000000</color>
+
+    <color name="white_alpha_d9">#D9FFFFFF</color>
+    <color name="white_alpha_cc">#CCFFFFFF</color>
+    <color name="white_alpha_99">#99FFFFFF</color>
+    <color name="white_alpha_80">#80FFFFFF</color>
+    <color name="white_alpha_66">#66FFFFFF</color>
+    <color name="white_alpha_33">#33FFFFFF</color>
+    <color name="white_alpha_1a">#1AFFFFFF</color>
+
+    <color name="fb_default_color">#4F6FE5</color>
+    <color name="fb_pressed_color">#3F58B7</color>
+    <color name="google_default_color">#DD4B39</color>
+    <color name="google_pressed_color">#B03C2D</color>
+
+    <color name="gray_tint_color">#666666</color>
+    <color name="translucent_inset_black">#75000000</color>
+    <color name="search_tab_title">#F94968</color>
+
+    <!-- sq:该配置来源与ps中设置部分-->
+    <color name="light_gray_color">#989898</color>
+    <color name="card_window_background">#E9ECF1</color>
+    <color name="list_pressed_color">#40000000</color>
+    <!-- sq:该配置来源与ps中设置部分-->
+
+    <color name="inset_text_color">#FF33A5FD</color>
+    <color name="inset_ad_text_color">#FF4466B0</color>
+    <color name="bookmark_webtitle_color">#FF262626</color>
 </resources>

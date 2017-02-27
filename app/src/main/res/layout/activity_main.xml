@@ -6,102 +6,102 @@
 
         <variable
             name="pageIndex"
-            type="int"/>
+            type="int" />
 
     </data>
 
     <FrameLayout
         android:id="@+id/activity_main"
-        android:background="@android:color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/home_page"
-            android:layout_marginBottom="57dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="57dp" />
 
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2px"
-            android:background="#66000000"/>
+            android:background="#66000000" />
 
         <LinearLayout
-            android:background="#F8F8F8"
-            android:layout_gravity="bottom"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="56dp">
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            android:background="#F8F8F8"
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:gravity="center"
                 android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:scaleType="fitXY"
-                    android:src="@{pageIndex == 0 ?@drawable/banner_carlogo2:@drawable/banner_carlogo1}"
                     android:layout_width="24dp"
-                    android:layout_height="24dp" />
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:src="@{pageIndex == 0 ?@drawable/banner_carlogo2:@drawable/banner_carlogo1}" />
 
                 <TextView
-                    android:includeFontPadding="false"
-                    android:layout_marginTop="5dp"
-                    android:textAppearance="@style/TextAppearance.12SP.Blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="汽车品牌"/>
+                    android:layout_marginTop="5dp"
+                    android:includeFontPadding="false"
+                    android:text="汽车品牌"
+                    android:textAppearance="@style/TextAppearance.12sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:gravity="center"
                 android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:src="@{pageIndex == 1 ?@drawable/banner_vs2:@drawable/banner_vs1}"
-                    android:scaleType="fitXY"
                     android:layout_width="24dp"
-                    android:layout_height="24dp" />
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:src="@{pageIndex == 1 ?@drawable/banner_vs2:@drawable/banner_vs1}" />
 
                 <TextView
-                    android:includeFontPadding="false"
-                    android:layout_marginTop="5dp"
-                    android:textAppearance="@style/TextAppearance.12SP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="猜一猜"/>
+                    android:layout_marginTop="5dp"
+                    android:includeFontPadding="false"
+                    android:text="猜一猜"
+                    android:textAppearance="@style/TextAppearance.12sp" />
 
 
             </LinearLayout>
 
             <LinearLayout
-                android:gravity="center"
                 android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_height="match_parent">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:src="@{pageIndex == 2 ?@drawable/banner_tools2:@drawable/banner_tools1}"
-                    android:scaleType="fitXY"
                     android:layout_width="24dp"
-                    android:layout_height="24dp" />
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:src="@{pageIndex == 2 ?@drawable/banner_tools2:@drawable/banner_tools1}" />
 
                 <TextView
-                    android:includeFontPadding="false"
-                    android:layout_marginTop="5dp"
-                    android:textAppearance="@style/TextAppearance.12SP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="设置"/>
+                    android:layout_marginTop="5dp"
+                    android:includeFontPadding="false"
+                    android:text="设置"
+                    android:textAppearance="@style/TextAppearance.12sp" />
 
             </LinearLayout>
 

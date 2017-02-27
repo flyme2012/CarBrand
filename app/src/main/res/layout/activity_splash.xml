@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
-                android:textAppearance="@style/TextAppearance.14SP.White" />
+                android:textAppearance="@style/TextAppearance.14sp.White" />
 
             <TextView
                 android:layout_gravity="center"
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{version}"
-                android:textAppearance="@style/TextAppearance.14SP.White" />
+                android:textAppearance="@style/TextAppearance.14sp.White" />
 
         </LinearLayout>
 

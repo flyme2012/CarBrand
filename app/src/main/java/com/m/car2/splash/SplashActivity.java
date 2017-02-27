@@ -35,7 +35,7 @@ public class SplashActivity extends BaseActivity {
                 startActivity(new Intent(SplashActivity.this, HomeActivity.class));
                 finish();
             }
-        },3000);
+        },1000);
 
         if (SPHelper.getInstance().getLong(SPConstant.SPLASH_SHOW_COUNT) % 2 == 1 ){
             mLayoutBinding.splashBg.setImageResource(R.drawable.splash_bg_exchange);

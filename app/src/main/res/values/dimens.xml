@@ -2,4 +2,65 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="text_large_size">20sp</dimen>
+    <dimen name="text_default_size">18sp</dimen>
+    <dimen name="text_medium_size">16sp</dimen>
+    <dimen name="text_small_size">14sp</dimen>
+    <dimen name="text_micro_size">12sp</dimen>
+    <dimen name="text_tiny_size">10sp</dimen>
+
+    <dimen name="statusbar_height">25dp</dimen>
+    <dimen name="inset_statusbar_height">0dp</dimen>
+
+    <dimen name="list_item_divider_height">1px</dimen>
+    <dimen name="common_btn_outline_width">1dp</dimen>
+    <dimen name="common_btn_radius">4dp</dimen>
+    <dimen name="toast_icon_size">48dp</dimen>
+    <dimen name="home_tabs_height">40dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="grid_horizontal_space">16dp</dimen>
+    <dimen name="grid_vertical_space">18dp</dimen>
+    <dimen name="user_avatar_size">18dp</dimen>
+    <dimen name="user_profile_size">56dp</dimen>
+    <dimen name="common_icon_size">24dp</dimen>
+    <dimen name="common_list_item_height">56dp</dimen>
+
+    <dimen name="floating_player_width">130dp</dimen>
+    <dimen name="floating_player_height">74dp</dimen>
+    <dimen name="floating_player_shadow">70dp</dimen>
+
+    <dimen name="floating_player_margin_right">14dp</dimen>
+    <dimen name="floating_player_margin_bottom">36dp</dimen>
+
+    <dimen name="floating_player_close_width">212dp</dimen>
+    <dimen name="floating_player_close_height">124dp</dimen>
+    <dimen name="floating_player_circle_width">48dp</dimen>
+    <dimen name="floating_player_shadow_width">70dp</dimen>
+
+    <dimen name="big_cover_size">150dp</dimen>
+    <dimen name="item_cover_size">48dp</dimen>
+    <dimen name="top_chart_item_trend_size">12dp</dimen>
+
+    <dimen name="list_item_margin">16dp</dimen>
+
+    <dimen name="home_tabs_indicator_height">3dp</dimen>
+
+    <dimen name="group_name_padding_top">18dp</dimen>
+    <dimen name="group_name_padding_bottom">12dp</dimen>
+    <dimen name="group_name_padding_right">16dp</dimen>
+    <dimen name="group_name_padding_left">16dp</dimen>
+    <dimen name="login_margin">16dp</dimen>
+
+    <dimen name="search_image_margin">12dp</dimen>
+    <dimen name="add_icon_width">14dp</dimen>
+    <dimen name="add_icon_height">9dp</dimen>
+    <dimen name="mark_icon_size">12dp</dimen>
+
+    <dimen name="default_cover_radius">4dp</dimen>
+
+    <dimen name="music_sign_height">170dp</dimen>
+    <dimen name="music_user_height">114dp</dimen>
+    <dimen name="common_icon_size_20dp">20dp</dimen>
+    <dimen name="playlist_cover_item_size">120dp</dimen>
 </resources>

@@ -20,7 +20,7 @@ public class CarApp extends Application {
     }
 
 
-    public static CarApp getInstance(){
+    public static CarApp getApp(){
         return instance;
     }
 }

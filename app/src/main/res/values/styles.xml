@@ -1,36 +1,268 @@
 <resources>
-
     <!--default size -->
     <style name="TextAppearance" parent="@android:style/TextAppearance">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_default_size</item>
+        <item name="android:textColor">@color/black_text_color_selector</item>
         <item name="android:fontFamily">sans-serif</item>
+        <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="TextAppearance.12SP">
-        <item name="android:textSize">12sp</item>
-    </style>
-
-    <style name="TextAppearance.12SP.Blue">
-        <item name="android:textColor">@color/colorPrimary</item>
-    </style>
-
-    <style name="TextAppearance.14SP">
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="TextAppearance.14SP.White">
+    <style name="TextAppearance.Inverse">
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="TextAppearance.20sp">
+        <item name="android:textSize">@dimen/text_large_size</item>
+    </style>
 
-    <style name="TextAppearance.16SP">
-        <item name="android:textSize">16sp</item>
+    <style name="TextAppearance.20sp.Toolbar">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.20sp.Black_80">
+        <item name="android:textColor">@color/dark_gray_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.20sp.Black_66">
+        <item name="android:textColor">@color/black_alpha_66</item>
+    </style>
+
+    <style name="TextAppearance.20sp.Black_33">
+        <item name="android:textColor">@color/black_alpha_33</item>
+    </style>
+
+    <style name="TextAppearance.20sp.White">
+        <item name="android:textColor">@color/white_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.20sp.White_CC">
+        <item name="android:textColor">@color/white_alpha_cc</item>
+    </style>
+
+    <style name="TextAppearance.20sp.White_99">
+        <item name="android:textColor">@color/white_alpha_99</item>
+    </style>
+
+    <style name="TextAppearance.20sp.White_80">
+        <item name="android:textColor">@color/white_alpha_80</item>
+    </style>
+
+    <style name="TextAppearance.20sp.Pink">
+        <item name="android:textColor">@color/pink_text_color_selector</item>
     </style>
 
 
-    <style name="TextAppearance.18SP">
-        <item name="android:textSize">18sp</item>
+    <style name="TextAppearance.18sp">
+        <item name="android:textSize">@dimen/text_default_size</item>
+    </style>
+
+    <style name="TextAppearance.18sp.Black_80">
+        <item name="android:textColor">@color/dark_gray_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.18sp.Black_66">
+        <item name="android:textColor">@color/black_alpha_66</item>
+    </style>
+
+    <style name="TextAppearance.18sp.Black_33">
+        <item name="android:textColor">@color/black_alpha_33</item>
+    </style>
+
+    <style name="TextAppearance.18sp.White">
+        <item name="android:textColor">@color/white_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.18sp.White_D9">
+        <item name="android:textColor">@color/white_alpha_d9</item>
+    </style>
+
+    <style name="TextAppearance.18sp.White_CC">
+        <item name="android:textColor">@color/white_alpha_cc</item>
+    </style>
+
+    <style name="TextAppearance.18sp.White_99">
+        <item name="android:textColor">@color/white_alpha_99</item>
+    </style>
+
+    <style name="TextAppearance.18sp.White_80">
+        <item name="android:textColor">@color/white_alpha_80</item>
+    </style>
+
+    <style name="TextAppearance.18sp.Pink">
+        <item name="android:textColor">@color/pink_text_color_selector</item>
+    </style>
+
+
+    <style name="TextAppearance.16sp">
+        <item name="android:textSize">@dimen/text_medium_size</item>
+    </style>
+
+    <style name="TextAppearance.16sp.Black_80">
+        <item name="android:textColor">@color/dark_gray_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.16sp.Black_66">
+        <item name="android:textColor">@color/black_alpha_66</item>
+    </style>
+
+    <style name="TextAppearance.16sp.Black_33">
+        <item name="android:textColor">@color/black_alpha_33</item>
+    </style>
+
+    <style name="TextAppearance.16sp.White">
+        <item name="android:textColor">@color/white_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.16sp.White_D9">
+        <item name="android:textColor">@color/white_alpha_d9</item>
+    </style>
+
+    <style name="TextAppearance.16sp.White_CC">
+        <item name="android:textColor">@color/white_alpha_cc</item>
+    </style>
+
+    <style name="TextAppearance.16sp.White_99">
+        <item name="android:textColor">@color/white_alpha_99</item>
+    </style>
+
+    <style name="TextAppearance.16sp.White_80">
+        <item name="android:textColor">@color/white_alpha_80</item>
+    </style>
+
+    <style name="TextAppearance.16sp.Pink">
+        <item name="android:textColor">@color/pink_text_color_selector</item>
+    </style>
+
+
+    <style name="TextAppearance.14sp">
+        <item name="android:textSize">@dimen/text_small_size</item>
+    </style>
+
+    <style name="TextAppearance.14sp.Black_80">
+        <item name="android:textColor">@color/dark_gray_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.14sp.Black_66">
+        <item name="android:textColor">@color/black_alpha_66</item>
+    </style>
+
+    <style name="TextAppearance.14sp.Black_33">
+        <item name="android:textColor">@color/black_alpha_33</item>
+    </style>
+
+    <style name="TextAppearance.14sp.White">
+        <item name="android:textColor">@color/white_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.14sp.White_D9">
+        <item name="android:textColor">@color/white_alpha_d9</item>
+    </style>
+
+    <style name="TextAppearance.14sp.White_CC">
+        <item name="android:textColor">@color/white_alpha_cc</item>
+    </style>
+
+    <style name="TextAppearance.14sp.White_99">
+        <item name="android:textColor">@color/white_alpha_99</item>
+    </style>
+
+    <style name="TextAppearance.14sp.White_80">
+        <item name="android:textColor">@color/white_alpha_80</item>
+    </style>
+
+    <style name="TextAppearance.14sp.Pink">
+        <item name="android:textColor">@color/pink_text_color_selector</item>
+    </style>
+
+
+    <style name="TextAppearance.12sp">
+        <item name="android:textSize">@dimen/text_micro_size</item>
+    </style>
+
+    <style name="TextAppearance.SongName">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_micro_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <!--<item name="android:lineSpacingExtra">3dp</item>-->
+
+
+    <style name="TextAppearance.12sp.Black_80">
+        <item name="android:textColor">@color/dark_gray_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.12sp.Black_66">
+        <item name="android:textColor">@color/black_alpha_66</item>
+    </style>
+
+    <style name="TextAppearance.12sp.Black_33">
+        <item name="android:textColor">@color/black_alpha_33</item>
+    </style>
+
+    <style name="TextAppearance.12sp.White">
+        <item name="android:textColor">@color/white_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.12sp.White_D9">
+        <item name="android:textColor">@color/white_alpha_d9</item>
+    </style>
+
+    <style name="TextAppearance.12sp.White_CC">
+        <item name="android:textColor">@color/white_alpha_cc</item>
+    </style>
+
+    <style name="TextAppearance.12sp.White_99">
+        <item name="android:textColor">@color/white_alpha_99</item>
+    </style>
+
+    <style name="TextAppearance.12sp.White_80">
+        <item name="android:textColor">@color/white_alpha_80</item>
+    </style>
+
+    <style name="TextAppearance.12sp.Pink">
+        <item name="android:textColor">@color/pink_text_color_selector</item>
+    </style>
+
+
+    <style name="TextAppearance.10sp">
+        <item name="android:textSize">@dimen/text_tiny_size</item>
+    </style>
+
+    <style name="TextAppearance.10sp.Black_80">
+        <item name="android:textColor">@color/dark_gray_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.10sp.Black_66">
+        <item name="android:textColor">@color/black_alpha_66</item>
+    </style>
+
+    <style name="TextAppearance.10sp.Black_33">
+        <item name="android:textColor">@color/black_alpha_33</item>
+    </style>
+
+    <style name="TextAppearance.10sp.White">
+        <item name="android:textColor">@color/white_text_color_selector</item>
+    </style>
+
+    <style name="TextAppearance.10sp.White_D9">
+        <item name="android:textColor">@color/white_alpha_d9</item>
+    </style>
+
+    <style name="TextAppearance.10sp.White_CC">
+        <item name="android:textColor">@color/white_alpha_cc</item>
+    </style>
+
+    <style name="TextAppearance.10sp.White_99">
+        <item name="android:textColor">@color/white_alpha_99</item>
+    </style>
+
+    <style name="TextAppearance.10sp.White_80">
+        <item name="android:textColor">@color/white_alpha_80</item>
+    </style>
+
+    <style name="TextAppearance.10sp.Pink">
+        <item name="android:textColor">@color/pink_text_color_selector</item>
     </style>
 
 

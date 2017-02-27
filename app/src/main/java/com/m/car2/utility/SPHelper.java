@@ -63,7 +63,7 @@ public class SPHelper implements SharedPreferences {
 
     public static synchronized SPHelper getInstance() {
         if (instance == null) {
-            instance = new SPHelper(CarApp.getInstance());
+            instance = new SPHelper(CarApp.getApp());
         }
         return instance;
     }
