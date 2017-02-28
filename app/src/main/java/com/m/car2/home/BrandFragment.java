@@ -11,11 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.m.car2.BaseFragment;
+import com.m.car2.CountryDetailActivity;
 import com.m.car2.R;
 import com.m.car2.adapter.databinding.BindingHolder;
 import com.m.car2.adapter.databinding.ItemViewBindingTemplate;
 import com.m.car2.adapter.multitype.MultiTypeAdapter;
 import com.m.car2.databinding.BrandLayoutBinding;
+import com.m.car2.databinding.CountryLayoutBinding;
 import com.m.car2.mode.ItemData;
 
 import java.util.ArrayList;
@@ -74,7 +76,7 @@ public class BrandFragment extends BaseFragment {
         listData.add(new ItemData("其他", R.drawable.earth, 12));
     }
 
-    public static class BrandItemTemplate extends ItemViewBindingTemplate<ItemData, BrandLayoutBinding> {
+    public class BrandItemTemplate extends ItemViewBindingTemplate<ItemData, BrandLayoutBinding> {
         @Override
         protected int getItemLayoutId() {
             return R.layout.brand_item;
@@ -97,7 +99,7 @@ public class BrandFragment extends BaseFragment {
         }
 
         private void jumpToDetail(ItemData itemData) {
-
+            CountryDetailActivity.launchCountryDetailActivity(getActivity(),itemData.getId());
         }
     }
 }

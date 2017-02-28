@@ -39,4 +39,8 @@ public class ItemData {
     public void setIconRecource(int iconRecource) {
         this.iconRecource = iconRecource;
     }
+
+    public int getId() {
+        return id;
+    }
 }

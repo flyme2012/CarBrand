@@ -10,6 +10,8 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.baidu.autoupdatesdk.BDAutoUpdateSDK;
+import com.baidu.autoupdatesdk.UICheckUpdateCallback;
 import com.m.car2.BaseActivity;
 import com.m.car2.R;
 import com.m.car2.databinding.ActivityMainBinding;
@@ -28,6 +30,8 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
         mLayoutBinding.setPageIndex(0);
         mLayoutBinding.homePage.setAdapter(new HomePageAdapter(getSupportFragmentManager()));
         mLayoutBinding.homePage.addOnPageChangeListener(this);
+
+        BDAutoUpdateSDK.uiUpdateAction(this, new MyUICheckUpdateCallback());
     }
 
     @Override
@@ -91,6 +95,16 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
                     break;
             }
             return fragment;
+        }
+    }
+
+    /**
+     * 自动更新接口
+     */
+    private class MyUICheckUpdateCallback implements UICheckUpdateCallback {
+        @Override
+        public void onCheckComplete() {
+            //检查完成后调用
         }
     }
 }
