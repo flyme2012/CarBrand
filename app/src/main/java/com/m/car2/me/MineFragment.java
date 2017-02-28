@@ -12,6 +12,7 @@ import com.m.car2.BaseFragment;
 import com.m.car2.R;
 import com.m.car2.adapter.multitype.MultiTypeAdapter;
 import com.m.car2.databinding.BrandLayoutBinding;
+import com.m.car2.databinding.MineLayoutBinding;
 import com.m.car2.home.BrandFragment;
 import com.m.car2.mode.ItemData;
 

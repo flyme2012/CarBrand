@@ -16,7 +16,6 @@
             android:id="@+id/brand_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:itemDecoration="@{RecyclerViewHelper.gridSpaceDecoration(4,(int)@dimen/grid_horizontal_space,(int)@dimen/grid_vertical_space,true)}"
             app:layoutManager="@{RecyclerViewHelper.gridLayoutManager(context,4,RecyclerViewHelper.VERTICAL)}" />
 
     </FrameLayout>
