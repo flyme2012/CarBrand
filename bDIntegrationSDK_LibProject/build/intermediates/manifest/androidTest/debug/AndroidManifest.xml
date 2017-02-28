@@ -27,10 +27,10 @@
 
         <meta-data
             android:name="BDAPPID"
-            android:value="" />
+            android:value="gtEsqdpu9GaTmIsw2iNahlRs" />
         <meta-data
             android:name="BDAPPKEY"
-            android:value="" />
+            android:value="gtEsqdpu9GaTmIsw2iNahlRs" />
 
         <activity
             android:name="com.baidu.autoupdatesdk.ConfirmDialoigActivity"

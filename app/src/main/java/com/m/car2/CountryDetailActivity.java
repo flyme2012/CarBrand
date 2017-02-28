@@ -4,8 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.view.View;
 
+import com.m.car2.adapter.databinding.BindingHolder;
+import com.m.car2.adapter.databinding.ItemViewBindingTemplate;
 import com.m.car2.adapter.multitype.MultiTypeAdapter;
+import com.m.car2.databinding.BrandLayoutBinding;
 import com.m.car2.databinding.CountryLayoutBinding;
 import com.m.car2.home.BrandFragment;
 import com.m.car2.mode.ItemData;
@@ -37,7 +41,7 @@ public class CountryDetailActivity extends BaseActivity {
         setSupportActionBar(mLayoutBinding.toolbar);
         initData();
         MultiTypeAdapter adapter = new MultiTypeAdapter(listData, 1);
-        adapter.register(ItemData.class, new BrandFragment.BrandItemTemplate());
+        adapter.register(ItemData.class, new BrandItemTemplate());
         mLayoutBinding.brandList.setAdapter(adapter);
     }
 
@@ -46,5 +50,27 @@ public class CountryDetailActivity extends BaseActivity {
     private void initData() {
         listData = new ArrayList<>();
 
+    }
+
+    public class BrandItemTemplate extends ItemViewBindingTemplate<ItemData, BrandLayoutBinding> {
+        @Override
+        protected int getItemLayoutId() {
+            return R.layout.brand_item;
+        }
+
+        @Override
+        protected int getVariableId() {
+            return com.m.car2.BR.itemData;
+        }
+
+        @Override
+        protected void onBindViewHolder(BindingHolder<BrandLayoutBinding> holder, final ItemData item) {
+            super.onBindViewHolder(holder, item);
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                }
+            });
+        }
     }
 }
