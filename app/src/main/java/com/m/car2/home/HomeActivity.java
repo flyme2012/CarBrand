@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import com.m.car2.BaseActivity;
 import com.m.car2.R;
 import com.m.car2.databinding.ActivityMainBinding;
+import com.m.car2.guess.GuessFragment;
 import com.m.car2.me.MineFragment;
 
 public class HomeActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
@@ -83,7 +84,7 @@ public class HomeActivity extends BaseActivity implements ViewPager.OnPageChange
                     fragment = BrandFragment.newInstance();
                     break;
                 case 1:
-                    fragment = BrandFragment.newInstance();
+                    fragment = GuessFragment.newInstance();
                     break;
                 case 2:
                     fragment = MineFragment.newInstance();

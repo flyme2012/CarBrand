@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 
+import com.baidu.mobstat.SendStrategyEnum;
+import com.baidu.mobstat.StatService;
 import com.m.car2.BaseActivity;
 import com.m.car2.BuildConfig;
 import com.m.car2.R;
@@ -42,6 +44,8 @@ public class SplashActivity extends BaseActivity {
         }
 
         mLayoutBinding.setVersion(BuildConfig.VERSION_NAME);
+
+        StatService.setSendLogStrategy(this, SendStrategyEnum.APP_START, 1, false);
 
     }
 
