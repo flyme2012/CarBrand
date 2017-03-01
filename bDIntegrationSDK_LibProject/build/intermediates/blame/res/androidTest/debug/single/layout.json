@@ -2,5 +2,9 @@
     {
         "merged": "/home/lbe/project/CarBrand/bDIntegrationSDK_LibProject/build/intermediates/res/merged/androidTest/debug/layout/bdp_update_activity_confirm_dialog.xml",
         "source": "/home/lbe/project/CarBrand/bDIntegrationSDK_LibProject/build/intermediates/bundles/debug/res/layout/bdp_update_activity_confirm_dialog.xml"
+    },
+    {
+        "merged": "/Users/hubing/AndroidStudioProjects/DataCrawl/bDIntegrationSDK_LibProject/build/intermediates/res/merged/androidTest/debug/layout/bdp_update_activity_confirm_dialog.xml",
+        "source": "/Users/hubing/AndroidStudioProjects/DataCrawl/bDIntegrationSDK_LibProject/build/intermediates/bundles/debug/res/layout/bdp_update_activity_confirm_dialog.xml"
     }
 ]

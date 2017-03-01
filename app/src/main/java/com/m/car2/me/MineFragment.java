@@ -7,14 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.m.car2.BaseActivity;
 import com.m.car2.BaseFragment;
 import com.m.car2.R;
-import com.m.car2.adapter.multitype.MultiTypeAdapter;
-import com.m.car2.databinding.BrandLayoutBinding;
 import com.m.car2.databinding.MineLayoutBinding;
-import com.m.car2.home.BrandFragment;
-import com.m.car2.mode.ItemData;
 
 /**
  * Created by hubing on 2017/2/27.
