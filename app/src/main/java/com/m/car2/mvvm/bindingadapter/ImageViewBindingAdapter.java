@@ -30,10 +30,10 @@ import com.m.car2.utility.SystemInfo;
 
 public class ImageViewBindingAdapter {
 
-    @BindingAdapter({"resourceId", "placeHolder", "transformations"})
-    public static void loadImage(ImageView imageView, int resourceId, Drawable placeHolder, Transformation<Bitmap>[] transformations) {
+    @BindingAdapter({"imageUrl", "placeHolder", "transformations"})
+    public static void loadImage(ImageView imageView, String imageUrl, Drawable placeHolder, Transformation<Bitmap>[] transformations) {
         Glide.with(imageView.getContext())
-                .load(resourceId)
+                .load(imageUrl)
                 .override(SystemInfo.dip2pxInt(imageView.getContext(), 56), SystemInfo.dip2pxInt(imageView.getContext(), 56))
                 .placeholder(placeHolder)
                 .into(imageView);
@@ -48,16 +48,25 @@ public class ImageViewBindingAdapter {
                 .into(imageView);
     }
 
-
-    @BindingAdapter({"imageUrl", "placeHolder", "transformations"})
-    public static void loadImage(ImageView imageView, final String imageUrl, Drawable placeHolder, Transformation<Bitmap>[] transformations) {
-        loadImageInternal(imageView, imageUrl, placeHolder, transformations);
-    }
-
     @BindingAdapter({"imageUrl", "placeHolder"})
     public static void loadImage(ImageView imageView, String imageUrl, Drawable placeHolder) {
-        loadImageInternal(imageView, imageUrl, placeHolder, null);
+        Glide.with(imageView.getContext())
+                .load(imageUrl)
+                .override(SystemInfo.dip2pxInt(imageView.getContext(), 56), SystemInfo.dip2pxInt(imageView.getContext(), 56))
+                .placeholder(placeHolder)
+                .into(imageView);
     }
+
+
+//    @BindingAdapter({"imageUrl", "placeHolder", "transformations"})
+//    public static void loadImage(ImageView imageView, final String imageUrl, Drawable placeHolder, Transformation<Bitmap>[] transformations) {
+//        loadImageInternal(imageView, imageUrl, placeHolder, transformations);
+//    }
+//
+//    @BindingAdapter({"imageUrl", "placeHolder"})
+//    public static void loadImage(ImageView imageView, String imageUrl, Drawable placeHolder) {
+//        loadImageInternal(imageView, imageUrl, placeHolder, null);
+//    }
 
     @BindingAdapter({"imageUrl"})
     public static void loadImage(ImageView imageView, String imageUrl) {

@@ -16,7 +16,8 @@
             android:id="@+id/brand_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layoutManager="@{RecyclerViewHelper.gridLayoutManager(context,4,RecyclerViewHelper.VERTICAL)}" />
+            app:itemDecoration="@{RecyclerViewHelper.listItemDividerDecoration(context,true,true)}"
+            app:layoutManager="@{RecyclerViewHelper.linearLayoutManager(context,RecyclerViewHelper.VERTICAL)}" />
 
     </FrameLayout>
 

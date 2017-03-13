@@ -33,7 +33,7 @@
         <activity android:name=".home.HomeActivity"
             android:launchMode="singleTask"/>
 
-        <activity android:name=".CountryDetailActivity"
+        <activity android:name=".detail.CarDetailActivity"
             android:launchMode="singleTask"/>
 
 

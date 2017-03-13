@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.m.car2.mvvm.bindingadapter.ImageHelper" />
+
+        <import type="com.m.car2.mode.CarData" />
+
+        <variable
+            name="carData"
+            type="com.m.car2.mode.CarData" />
+
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
+        <com.m.car2.widgets.RoundedImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp" />
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/default_bg"
+            app:placeHolder="@{@drawable/default_bg}"
+            app:imageUrl="@{carData.carIconUrl}"
+            app:riv_oval="true" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -25,11 +43,13 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/one"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
                 <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/two"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
@@ -43,11 +63,13 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/three"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
                 <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/four"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
